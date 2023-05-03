@@ -1,0 +1,43 @@
+---
+title: A Simple *Science* Template
+author:
+  - name: John Smith
+    affiliations:
+      - name: University of Wherever
+        department: Department of Chemistry
+        address: An Unknown Address
+        city: Wherever, ST
+        country: USA
+        postal-code: "00000 " # need a space to avoid stripping leading zeros
+    corresponding: true
+    email: jsmith@wherever.edu
+  - name: Jane Doe
+    affiliations:
+      - name: University of Wherever
+        department: Department of Chemistry
+  - name: Joe Scientist
+    affiliations:
+      - name: University of Wherever
+        department: Department of Chemistry
+        address: Another Unknown Address
+        city: Palookaville, ST
+        country: USA
+        postal-code: 99999
+abstract: |
+  This document presents a number of hints about how to set up your
+  *Science* paper in \LaTeX.  We provide a template file, `scifile.tex`, 
+  that you can use to set up the \LaTeX{} source for your article.  
+  An example of the style is the special `{sciabstract}` environment
+  used to set up the abstract you see here.
+keywords: [template, demo]
+bibliography: bibliography.bib  
+format:
+  science-pdf:
+    keep-tex: true  
+---
+
+## Introduction {#sec-intro}
+
+
+
+

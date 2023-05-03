@@ -1,0 +1,10 @@
+*.tmp
+*.bak
+*.swp
+.DS_Store
+
+*.pdf
+
+*_files/
+/template.tex
+.Rproj.user
