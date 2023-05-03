@@ -1,0 +1,47 @@
+$if(title)$
+% Include your paper's title here
+\title{$title$}
+$endif$
+
+% Place the author information here.  Please hand-code the contact
+% information and notecalls; do *not* use \footnote commands.  Let the
+% author contact information appear immediately below the author names
+% as shown.  We would also prefer that you don't change the type-size
+% settings shown here.
+
+\author{%
+$for(by-author/allbutlast)$
+$it.name.literal$,$$^{$for(it.affiliations/first)$$it.number$$endfor$$if(it.attributes.corresponding)$\ast$endif$}$$ 
+$endfor$
+$for(by-author/last)$
+$it.name.literal$$$^{$for(it.affiliations/first)$$it.number$$endfor$$if(it.attributes.corresponding)$\ast$endif$}$$
+$endfor$\\\\
+\\
+$for(by-affiliation)$
+\normalsize{$$^{$it.number$}$$}%
+$if(it.department)$
+$if(it.address)$
+\normalsize{$it.department$, $it.name$,}\\
+\normalsize{$it.address$, $it.city$, $if(it.region)$$it.region$$else$$it.country$$endif$ $it.postal-code$}\\
+$else$
+\normalsize{$it.department$, $it.name$}\\
+$endif$
+$else$
+$if(it.address)$
+\normalsize{$it.name$,}\\
+\normalsize{$it.address$, $it.city$, $if(it.region)$$it.region$$else$$it.country$$endif$ $it.postal-code$}\\
+$else$
+\normalsize{$it.name$}\\
+$endif$
+$endif$
+$endfor$
+% \normalsize{$$^{1}$$}%
+% \normalsize{Department of Chemistry, University of Wherever,}\\
+% \normalsize{An Unknown Address, Wherever, ST 00000, USA}\\
+% \normalsize{$$^{2}$$Another Unknown Address, Palookaville, ST 99999, USA}\\
+% \\
+% \normalsize{$$^\ast$$To whom correspondence should be addressed; E-mail:  jsmith@wherever.edu.}
+}
+
+% Include the date command, but leave its argument blank.
+\date{}

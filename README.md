@@ -4,6 +4,8 @@
 This is a Quarto template that assists you in creating a manuscript for *Science* Journals.
 See [the *Science* website](https://www.science.org/content/page/preparing-manuscripts-using-latex) for more information on LaTeX submissions.
 
+For final submission, you will need to make some manual edits to the TeX source, to inline the `.bbl` and and figure references.
+
 
 ## Creating a New Article
 

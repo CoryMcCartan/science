@@ -1,0 +1,33 @@
+title: Science
+author: Cory McCartan
+version: 0.1.0
+quarto-required: ">=1.2.0"
+contributes:
+  formats:
+    common:
+      toc: false
+      fontsize: 12pt
+      date-format: long
+      execute:
+        echo: false
+        warning: false
+    pdf:
+      template: template.tex
+      template-partials:
+        - partials/title.tex
+        - partials/before-body.tex
+        - partials/after-body.tex
+      number-sections: false
+      block-headings: false
+      doublespacing: true
+      cite-method: natbib
+      biblio-style: science
+      format-resources:
+        - science.bst
+        - scicite.sty
+      fig-format: pdf
+      fig-width: 7
+      fig-height: 3.5
+      pdf-engine: pdflatex
+
+

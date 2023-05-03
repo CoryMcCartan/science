@@ -1,0 +1,11 @@
+$if(thanks)$
+\section*{Acknowledgments}
+\thanks{$thanks$}
+$endif$
+
+$if(supp-list)$
+\section*{Supplementary materials}
+$for(supp-list)$
+$supp-list$$sep$\\
+$endfor$
+$endif$

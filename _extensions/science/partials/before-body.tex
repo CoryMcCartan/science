@@ -1,0 +1,18 @@
+% Double-space the manuscript.
+\baselineskip24pt
+
+$if(has-frontmatter)$
+\frontmatter
+$endif$
+
+$if(title)$
+% Make the title.
+\maketitle
+
+$if(abstract)$
+\begin{sciabstract}
+$abstract$
+\end{sciabstract}
+$endif$
+
+$endif$
