@@ -11,7 +11,7 @@ $endif$
 
 \author{%
 $for(by-author/allbutlast)$
-$it.name.literal$,$$^{$for(it.affiliations/first)$$it.number$$endfor$$if(it.attributes.corresponding)$\ast$endif$}$$ 
+$it.name.literal$,$$^{$for(it.affiliations/first)$$it.number$$endfor$$if(it.attributes.corresponding)$\ast$endif$}$$
 $endfor$
 $for(by-author/last)$
 $it.name.literal$$$^{$for(it.affiliations/first)$$it.number$$endfor$$if(it.attributes.corresponding)$\ast$endif$}$$
@@ -22,21 +22,25 @@ $for(by-affiliation)$
 $if(it.department)$
 $if(it.address)$
 \normalsize{$it.department$, $it.name$,}\\
-\normalsize{$it.address$, $it.city$, $if(it.region)$$it.region$$else$$it.country$$endif$ $it.postal-code$}\\
+\normalsize{$it.address$, $it.city$, $if(it.region)$$it.region$$else$$it.country$$endif$ $it.postal-code$}
 $else$
-\normalsize{$it.department$, $it.name$}\\
+\normalsize{$it.department$, $it.name$}
 $endif$
 $else$
 $if(it.address)$
 \normalsize{$it.name$,}\\
-\normalsize{$it.address$, $it.city$, $if(it.region)$$it.region$$else$$it.country$$endif$ $it.postal-code$}\\
+\normalsize{$it.address$, $it.city$, $if(it.region)$$it.region$$else$$it.country$$endif$ $it.postal-code$}
 $else$
-\normalsize{$it.name$}\\
+\normalsize{$it.name$}
 $endif$
+$endif$
+$sep$\\
+$endfor$
+$for(by-author)$
+$if(it.attributes.corresponding)$
+\\\normalsize{$$^\ast$$To whom correspondence should be addressed; E-mail:  $it.email$.}
 $endif$
 $endfor$
-\\
-\normalsize{$$^\ast$$To whom correspondence should be addressed; E-mail:  jsmith@wherever.edu.}
 }
 
 % Include the date command, but leave its argument blank.
