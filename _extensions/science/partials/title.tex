@@ -11,10 +11,10 @@ $endif$
 
 \author{%
 $for(by-author/allbutlast)$
-$it.name.literal$,$$^{$for(it.affiliations/first)$$it.number$$endfor$$if(it.attributes.corresponding)$\ast$endif$}$$
+$it.name.literal$,$$^{$for(it.affiliations)$$it.number$$sep$,$endfor$$if(it.attributes.corresponding)$\ast$endif$}$$
 $endfor$
 $for(by-author/last)$
-$it.name.literal$$$^{$for(it.affiliations/first)$$it.number$$endfor$$if(it.attributes.corresponding)$\ast$endif$}$$
+$it.name.literal$$$^{$for(it.affiliations)$$it.number$$sep$,$endfor$$if(it.attributes.corresponding)$\ast$endif$}$$
 $endfor$\\\\
 \\
 $for(by-affiliation)$
