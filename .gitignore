@@ -7,4 +7,6 @@
 
 *_files/
 /template.tex
+scicite.sty
+science.bst
 .Rproj.user

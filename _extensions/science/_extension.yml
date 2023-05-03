@@ -20,6 +20,7 @@ contributes:
       number-sections: false
       block-headings: false
       doublespacing: true
+      colorlinks: false
       cite-method: natbib
       biblio-style: science
       format-resources:

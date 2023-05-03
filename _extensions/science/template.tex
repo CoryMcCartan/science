@@ -1,4 +1,5 @@
 \PassOptionsToPackage{unicode$for(hyperrefoptions)$,$hyperrefoptions$$endfor$}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
 % Use only LaTeX2e, calling the article.cls class and 12-point type.
 $doc-class.tex()$
 
@@ -9,7 +10,7 @@ $doc-class.tex()$
 % The following parameters seem to provide a reasonable page setup.
 \topmargin 0.0cm
 \oddsidemargin 0.2cm
-\textwidth 16cm 
+\textwidth 16cm
 \textheight 21cm
 \footskip 1.0cm
 
@@ -28,6 +29,7 @@ $if(biblio-config)$
 $endif$
 
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{}
 \hypersetup{
 $if(title-meta)$
   pdftitle={$title-meta$},
@@ -49,6 +51,8 @@ $endif$
 $endif$
   pdfcreator={LaTeX via pandoc}}
 
+$tightlist.tex()$
+$graphics.tex()$
 
 
 %The next command sets up an environment for the abstract to your paper.
@@ -62,7 +66,7 @@ $title.tex()$
 
 %%%%%%%%%%%%%%%%% END OF PREAMBLE %%%%%%%%%%%%%%%%
 
-\begin{document} 
+\begin{document}
 
 $before-body.tex()$
 $for(include-before)$
